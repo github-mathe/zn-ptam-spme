@@ -1,0 +1,56 @@
+Symbol,Parameter,Value,Units,Category,Domain,Notes
+L_p,Thickness of the positive electrode,1.5e-05,m,Geometrical,Positive electrode,Measured
+L_s,Thickness of the separator,0.0002,m,Geometrical,Separator,Measured
+L_n,Thickness of the negative electrode,NaN,m,Geometrical,Negative electrode,
+R_p,Particle radius,1e-05,m,Geometrical,Positive electrode,Assumed
+R_n,Particle radius,NaN,m,Geometrical,Negative electrode,
+A_cell,Electrode area,0.000113,m^2,Geometrical,Cell,Measured
+eps_s_p,Solid-phase volume fraction,0.346,—,Geometrical,Positive electrode,Measured
+eps_s_n,Solid-phase volume fraction,NaN,—,Geometrical,Negative electrode,
+eps_e_p,Liquid-phase volume fraction,0.534,—,Geometrical,Positive electrode,Measured
+eps_e_s,Liquid-phase volume fraction,0.9,—,Geometrical,Separator,Measured
+eps_e_n,Liquid-phase volume fraction,NaN,—,Geometrical,Negative electrode,
+a_s_p,Specific interfacial surface area,103800,m^-1,Geometrical,Positive electrode,Computed: 3*eps_s_p/R_p
+a_s_n,Specific interfacial surface area,NaN,m^-1,Geometrical,Negative electrode,
+brugg_p,Bruggeman's exponent,1.5,—,Geometrical,Positive electrode,Assumed
+brugg_s,Bruggeman's exponent,1.5,—,Geometrical,Separator,Assumed
+brugg_n,Bruggeman's exponent,NaN,—,Geometrical,Negative electrode,Assumed
+c_s_max_p,Maximum ion concentration in the particle,4637.8,mol/m^3,Chemical,Positive electrode,Estimated
+c_s_max_n,Maximum ion concentration in the particle,NaN,mol/m^3,Chemical,Negative electrode,
+c_e_ref,Initial salt concentration,2000,mol/m^3,Chemical,Electrolyte,Measured
+x0_p,Stoichiometry at 0% SOC,1.0781105289562e-08,—,Chemical,Positive electrode,Assumed
+x1_p,Stoichiometry at 100% SOC,1,—,Chemical,Positive electrode,Estimated
+x0_n,Stoichiometry at 0% SOC,NaN,—,Chemical,Negative electrode,
+x1_n,Stoichiometry at 100% SOC,NaN,—,Chemical,Negative electrode,
+SOC,Initial state of charge,0,—,Chemical,Cell,
+nu,Sum of stoichiometric coefficients,3,—,Chemical,Electrolyte,Computed
+nu_cation,Unsigned stoichiometric coefficient of cation,1,—,Chemical,Electrolyte,Computed
+nu_anion,Unsigned stoichiometric coefficient of anion,2,—,Chemical,Electrolyte,Computed
+s_p_cation,Signed stoichiometric coefficient of cation,0,—,Chemical,Positive electrode,Computed
+s_p_anion,Signed stoichiometric coefficient of anion,1,—,Chemical,Positive electrode,Computed
+s_n_cation,Signed stoichiometric coefficient of cation,-1,—,Chemical,Negative electrode,Computed
+s_n_anion,Signed stoichiometric coefficient of anion,0,—,Chemical,Negative electrode,Computed
+n_e_p,Stoichiometric number of electrons,1,—,Chemical,Positive electrode,Computed
+n_e_n,Stoichiometric number of electrons,2,—,Chemical,Negative electrode,Computed
+z_cation,Charge number of cation,2,—,Chemical,Electrolyte,Computed
+z_anion,Charge number of anion,-1,—,Chemical,Electrolyte,Computed
+Q_th,Theoretical electrode capacity,7.28994271367419e-05,Ah,Chemical,Positive electrode,Computed: (A*F*L_p*eps_s_p*c_s_max*abs(theta_100-theta_0))/3600
+D_s_p,Diffusivity coefficient,1.487e-13,m^2/s,Transport,Positive electrode,Measured
+D_s_n,Diffusivity coefficient,NaN,m^2/s,Transport,Negative electrode,
+D_e_eff_s,Effective electrolyte diffusivity coefficient,7.18e-09,m^2/s,Transport,Separator,Computed
+D_e_eff_p,Effective electrolyte diffusivity coefficient,3.28150118653259e-09,m^2/s,Transport,Positive electrode,Measured
+sigma_s_p,Electrode conductivity,NaN,S/m,Transport,Positive electrode,
+sigma_s_n,Electrode conductivity,NaN,S/m,Transport,Negative electrode,
+kappa_e,Ionic conductivity,1,S/m,Transport,Electrolyte,Measured
+t_plus,Cation transference number,0.26,—,Transport,Electrolyte,Measured
+TDF,Thermodynamic factor,4,—,Transport,Electrolyte,Assumed
+k_p,Effective reaction rate constant,4.71341523692197e-10,m^{2.5}/(mol^{0.5}s),Kinetic,Positive electrode,Measured
+k_n,Effective reaction rate constant,2.43335954294607e-06,m^{2.5}/(mol^{0.5}s),Kinetic,Negative electrode,Measured
+alpha_p,Charge-transfer coefficient,0.5,—,Kinetic,Positive electrode,Assumed
+alpha_n,Charge-transfer coefficient,0.5,—,Kinetic,Negative electrode,Assumed
+i0_ref_p,Exchange current density,6.616272,A/m^2,Kinetic,Positive electrode,Measured
+i0_ref_n,Exchange current density,21,A/m^2,Kinetic,Negative electrode,Measured
+U_ref_p,Reference open-circuit potential,NaN,V,Thermodynamic,Positive electrode,Measured
+U_ref_n,Reference open-circuit potential,-1.03,V,Thermodynamic,Negative electrode,Measured
+R_gas,Universal gas constant,8.314462618,J/(mol·K),Thermodynamic,Cell,
+T_ref,Reference temperature,298.15,K,Thermodynamic,Cell,Measured

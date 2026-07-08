@@ -1,0 +1,19 @@
+# MATLAB
+*.asv
+*.autosave
+*.mat
+*.mex*
+*.mlappinstall
+*.prj
+*.pcode
+
+# Editor and OS files
+.DS_Store
+Thumbs.db
+
+# Generated outputs
+results/
+output/
+figures/
+logs/
+tmp/

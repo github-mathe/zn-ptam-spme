@@ -1,0 +1,9 @@
+function constants = getConstants()
+    constants = struct(...
+        'F', 96487, ...            % Faraday [C/mol]
+        'R', 8.31446262, ...       % Gas constant [J/mol/K]
+        'T', 298.15, ...           % Temperature [K]
+        'Boltzmann', 1.3806e-23, ...
+        'Avogadro', 6.0221e+23...
+    );
+end
