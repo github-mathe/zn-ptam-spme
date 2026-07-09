@@ -24,6 +24,8 @@ function [cathode, electrolyte,anode] = initInitialConditions(t_init,cathode, el
     end
     state = evaluateElectrochemicalState(t_init, [cathode.cs_0;electrolyte.ce_0], cathode, electrolyte, anode, reaction, constants);
     cathode.InitState.css=state.css;
+    electrolyte.InitState.ce_avg_pos = state.ce_avg_pos;
+    electrolyte.InitState.ce_avg_sep = state.ce_avg_sep;
     electrolyte.InitState.ce_avg = state.ce_avg;
     cathode.k0=state.cathode.k0;
     anode.k0 =state.anode.k0;

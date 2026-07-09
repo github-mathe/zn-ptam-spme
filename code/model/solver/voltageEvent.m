@@ -12,8 +12,9 @@ function [value, isterminal, direction] = voltageEvent(t, y, cathode, electrolyt
     
     % Event 2: any of first N_DOF_cat becomes <= tol_positive
     % We want event when min(y(1:N_DOF_cat)) - tol_positive == 0 (i.e. <= tol)
-    val_dof = min(y(1:cathode.Geometry.dof.number_of_dofs));
-    val_css = min(cathode.cs_max-y(cathode.Geometry.dof.number_of_dofs));
+    cathode_state = y(1:cathode.Geometry.dof.number_of_dofs);
+    val_dof = min(cathode_state);
+    val_css = min(cathode.cs_max - cathode_state);
 if val_css<=0 || val_dof<=0
     value = -1;
 else

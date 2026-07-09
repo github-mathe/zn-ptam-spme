@@ -21,8 +21,8 @@ function state = evaluateElectrochemicalState(t, y, cathode, electrolyte, anode,
 
     % Key values
     state.css = cs(end);
-    state.ce_avg = compute_avg_ce(electrolyte, ce);
-    state.sqrt_ce_avg = compute_avg_ce(electrolyte, sqrt(ce));
+    [state.ce_avg,state.ce_avg_sep,state.ce_avg_pos] = compute_avg_ce(electrolyte, ce);
+    [~,~,state.sqrt_ce_avg_pos] = compute_avg_ce(electrolyte, sqrt(ce));
      
     % Exchange current densities
     electrodes = {'cathode', 'anode'};
@@ -35,7 +35,7 @@ function state = evaluateElectrochemicalState(t, y, cathode, electrolyte, anode,
             if strcmp(name, 'cathode')
                 state.(name).i0 = reaction.n_pos_electron * F * eq.k0 * ...
                     sqrt((state.css ) * ...
-                    (eq.cs_max - state.css))*state.sqrt_ce_avg*sqrt(2);
+                    (eq.cs_max - state.css))*state.sqrt_ce_avg_pos*sqrt(2);
                 state.(name).k0 = eq.k0;
             elseif strcmp(name, 'anode')
                 state.(name).i0 = reaction.n_neg_electron * F * eq.k0 * ...
@@ -45,7 +45,7 @@ function state = evaluateElectrochemicalState(t, y, cathode, electrolyte, anode,
         elseif (isfield(eq, 'i0') && ~isempty(eq.i0)) || ~isfield(eq, 'k0')
             if strcmp(name, 'cathode')
                 state.(name).k0 = eq.i0 / (reaction.n_pos_electron * F) / ...
-                    (state.css)^(1 - eq.alpha)/state.sqrt_ce_avg /sqrt(2)/ ...
+                    (state.css)^(1 - eq.alpha)/state.sqrt_ce_avg_pos /sqrt(2)/ ...
                     (eq.cs_max - state.css)^eq.alpha;
             elseif strcmp(name, 'anode')
                 state.(name).k0 = eq.i0 / (reaction.n_neg_electron * F) / ...

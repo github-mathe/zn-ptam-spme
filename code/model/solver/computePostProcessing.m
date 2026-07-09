@@ -39,11 +39,15 @@ end
     results.i0_cathode = zeros(N_time, 1);
     results.i0_anode = zeros(N_time, 1);
     results.css = zeros(N_time, 1);
+    results.ce_avg_pos = zeros(N_time, 1);
+    results.ce_avg_sep = zeros(N_time, 1);
     results.ce_avg = zeros(N_time, 1);
     results.cell_SOC = zeros(N_time,1);
     results.k0_cathode = [cathode.k0;zeros(N_time-1, 1)];
     results.k0_anode = [anode.k0;zeros(N_time-1, 1)];
     results.css(1)         = cathode.InitState.css;
+    results.ce_avg_pos(1)      = electrolyte.InitState.ce_avg_pos;
+    results.ce_avg_sep(1)      = electrolyte.InitState.ce_avg_sep;
     results.ce_avg(1)      = electrolyte.InitState.ce_avg;
     results.i0_cathode(1)  = cathode.InitState.i0;
     results.i0_anode(1)    = anode.InitState.i0;
@@ -58,12 +62,14 @@ end
     results.AvgCs(1,1)     = cathode.InitState.css;
     results.j_cathode(1, 1) = cathode.j_n(0);
     results.j_anode(1, 1) = electrolyte.i_n_neg(0)/constants.F;
-    results.Q(1, 1) = results.AvgCs(1, 1) * constants.F * cathode.L * cathode.epsilon_s*cathode.A /3600;
+    results.Q(1, 1) = 0;
     
     for n = 2:N_time
         y_vec = Y(n, :)';
         state = evaluateElectrochemicalState(tvec(n), y_vec, cathode, electrolyte, anode, reaction, constants);
         results.css(n)         = state.css;
+        results.ce_avg_pos(n)      = state.ce_avg_pos;
+        results.ce_avg_sep(n)      = state.ce_avg_sep;
         results.ce_avg(n)      = state.ce_avg;
         results.i0_cathode(n)  = state.cathode.i0;
         results.i0_anode(n)    = state.anode.i0;
