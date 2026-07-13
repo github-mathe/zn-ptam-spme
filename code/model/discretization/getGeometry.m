@@ -2,7 +2,7 @@ function eq = getGeometry(eq)
     x_start = eq.domain(1);
     x_end = eq.domain(end);
     num_ref = eq.fem_ref;
-    [xq,wq] = lgwt(eq.fem_q,0,1);
+    [xq,wq] = gaussLegendre(eq.fem_q,0,1);
     
     % generate grid and elements 
     [grid, el] = create_grid_1D(x_start,x_end,num_ref);
