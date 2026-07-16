@@ -1,0 +1,55 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata from this file."
+title: "zn-ptam-spme: MATLAB implementation of an SPMe model for Zn-PTAm dual-ion polymer batteries"
+type: software
+
+authors:
+  - family-names: "Yessim"
+    given-names: "Aigerim"
+    orcid: "https://orcid.org/0009-0009-6975-9211"
+    affiliation: "Institute of Modeling and Computational Science, Applied Mathematics, Helmut-Schmidt-Universität/Universität der Bundeswehr Hamburg, Hamburg, Germany"
+
+  - family-names: "Zimmer"
+    given-names: "Philip"
+    orcid: "https://orcid.org/0009-0008-2743-1990"
+    affiliation: "Helmholtz Institute for Polymers in Energy Applications Jena (HIPOLE Jena), Jena, Germany; Helmholtz-Zentrum Berlin für Materialien und Energie GmbH (HZB), Berlin, Germany"
+
+  - family-names: "Hager"
+    given-names: "Martin D."
+    orcid: "https://orcid.org/0000-0002-6373-6600"
+    affiliation: "Helmholtz Institute for Polymers in Energy Applications Jena (HIPOLE Jena), Jena, Germany; Helmholtz-Zentrum Berlin für Materialien und Energie GmbH (HZB), Berlin, Germany"
+
+  - family-names: "Schubert"
+    given-names: "Ulrich S."
+    orcid: "https://orcid.org/0000-0003-4978-4670"
+    affiliation: "Helmholtz Institute for Polymers in Energy Applications Jena (HIPOLE Jena), Jena, Germany; Helmholtz-Zentrum Berlin für Materialien und Energie GmbH (HZB), Berlin, Germany"
+
+  - family-names: "Carraro"
+    given-names: "Thomas"
+    orcid: "https://orcid.org/0000-0002-0503-4555"
+    email: "carraro@hsu-hh.de"
+    affiliation: "Institute of Modeling and Computational Science, Applied Mathematics, Helmut-Schmidt-Universität/Universität der Bundeswehr Hamburg, Hamburg, Germany"
+
+repository-code: "https://github.com/github-mathe/zn-ptam-spme"
+url: "https://github.com/github-mathe/zn-ptam-spme"
+license: "MIT"
+
+abstract: >
+  MATLAB implementation of a Single Particle Model with Electrolyte (SPMe)
+  for Zn-PTAm dual-ion polymer batteries. The repository includes model and
+  solver code, reproducible simulation workflows, processed experimental data
+  loading, and plotting scripts for experiment-versus-simulation comparison
+  and internal-state visualization.
+
+keywords:
+  - "MATLAB"
+  - "SPMe"
+  - "single particle model with electrolyte"
+  - "Zn-PTAm"
+  - "dual-ion battery"
+  - "polymer battery"
+  - "electrochemical modeling"
+  - "battery modeling"
+
+version: "0.1.0"
+date-released: "2026-07-16"

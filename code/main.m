@@ -7,7 +7,7 @@ defaults = loadSimulationDefaults();
 
 % User input
 workflow = 'single_case'; % 'single_case' or 'sweep'
-Crate = 100;
+Crate = 10;
 selectedIdx = 4:numel(defaults.crates);
 autoPlot = true;
 saveFigures = true;

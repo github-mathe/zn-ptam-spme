@@ -25,6 +25,8 @@ zn-ptam-spme/
     raw/
     processed/
   results/
+  CHANGELOG.md
+  LICENSE
   README.md
 ```
 
@@ -39,6 +41,12 @@ zn-ptam-spme/
 - `results/`: generated simulation outputs and exported figures.
 
 ## Running The Code
+
+The code was developed and tested with MATLAB R2025b Update 4:
+
+```text
+MATLAB version 25.2.0.3150157 (R2025b) Update 4
+```
 
 Open MATLAB in the `zn-ptam-spme/` folder and add the code directory to the path:
 
@@ -165,6 +173,15 @@ For default-case runs, figures are exported into:
 ```text
 results/default_cases/figures/Crate_<C-rate>/
 ```
+## License
+
+The MATLAB source code in this repository is licensed under the MIT License. See `LICENSE` for details.
+
+The processed experimental data were provided by collaborators and are included with permission for reproducibility of the simulations and figures. These data are not covered by the MIT License unless explicit permission from the data owners is obtained.
+
+## Changelog
+
+Notable changes are documented in `CHANGELOG.md`.
 
 ## Notes
 
