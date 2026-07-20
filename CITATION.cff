@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it using the metadata from this file."
-title: "zn-ptam-spme: MATLAB implementation of a Single Particle Model with Electolyte (SPMe) for Zn-PTAm dual-ion polymer battery cells"
+title: "zn-ptam-spme: MATLAB implementation of a Single Particle Model with Electrolyte (SPMe) for Zn-PTAm dual-ion polymer battery cells"
 type: software
 
 authors:
