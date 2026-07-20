@@ -1,6 +1,6 @@
 # zn-ptam-spme
 
-MATLAB implementation of a Single Particle Model with Electrolyte (SPMe) for Zn-PTAm dual-ion polymer batteries.
+MATLAB implementation of a Single Particle Model with Electrolyte (SPMe) for Zn-PTAm dual-ion polymer battery cells.
 
 The repository contains:
 - the SPMe model and solver,
@@ -152,7 +152,7 @@ The main reproducibility settings are centralized in:
 - `code/utils/runDefaultSimulationCase.m`: runs and saves one default simulation case.
 - `code/plotting/plotSavedCrateResults.m`: loads and plots one saved case programmatically.
 
-## Data And Outputs
+## Data and Outputs
 
 Processed experimental data are stored under:
 
@@ -175,9 +175,16 @@ results/default_cases/figures/Crate_<C-rate>/
 ```
 ## License
 
-The MATLAB source code in this repository is licensed under the MIT License. See `LICENSE` for details.
+The MATLAB source code in this repository is licensed under the MIT License.
+See [`LICENSE`](LICENSE) for details.
 
-The processed experimental data were provided by collaborators and are included with permission for reproducibility of the simulations and figures. These data are not covered by the MIT License unless explicit permission from the data owners is obtained.
+The experimental data are licensed under the Creative Commons
+Attribution 4.0 International License (CC BY 4.0). See
+[`DATA_LICENSE.md`](DATA_LICENSE.md) for details.
+
+When using these data, please cite the corresponding Zenodo record and
+acknowledge the original data providers. Once the associated scientific
+publication becomes available, please cite it as well.
 
 ## Changelog
 
