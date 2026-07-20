@@ -178,13 +178,17 @@ results/default_cases/figures/Crate_<C-rate>/
 The MATLAB source code in this repository is licensed under the MIT License.
 See [`LICENSE`](LICENSE) for details.
 
-The experimental data are licensed under the Creative Commons
-Attribution 4.0 International License (CC BY 4.0). See
-[`DATA_LICENSE.md`](DATA_LICENSE.md) for details.
+The processed experimental data are made available under the terms described
+in [`DATA_LICENSE.md`](DATA_LICENSE.md).
 
-When using these data, please cite the corresponding Zenodo record and
-acknowledge the original data providers. Once the associated scientific
-publication becomes available, please cite it as well.
+When using the software or the processed experimental data, please cite the
+corresponding Zenodo record:
+
+**DOI:** [10.5281/zenodo.21463177](https://doi.org/10.5281/zenodo.21463177)
+
+Users of the processed experimental data should also acknowledge the original
+data providers. Once the associated scientific publication becomes available,
+please cite it as well.
 
 ## Changelog
 
